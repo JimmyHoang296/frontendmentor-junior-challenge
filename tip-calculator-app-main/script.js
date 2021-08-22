@@ -35,6 +35,7 @@ radioList.forEach(radio =>{
             console.log (radio.value)
             percent = radio.value
             custom_percent.value = ""
+            updateResult()
         }
     } )
 })
@@ -114,6 +115,7 @@ function resetValue(){
     people.value = ""
     personAmount.innerText = `$0.00`
     totalAmount.innerText = `$0.00`
+    radioList.forEach(radio => radio.checked = false)
 }
 
 function afterUpdate(element, cautionElement){
