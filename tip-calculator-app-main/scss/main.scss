@@ -1,0 +1,247 @@
+@import "base";
+
+@mixin flex ($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+
+.activeCaution{
+    border: 3px solid #b57b6d;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+
+}
+.main{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    position:absolute;
+    top:0;
+    left: 0;
+    background-color: $light-cyan;
+    @include flex(column);
+}
+
+.logo{
+    width: 90px;
+    margin-bottom: 90px;
+}
+
+.container{
+    width: 90%;
+    max-width: 925px;
+    background-color: $white;
+    padding: 30px;
+    border-radius: 20px;
+    @include flex(row);
+    justify-content: space-between;
+    gap: 50px;
+
+    &_inputs{
+        width: 50%;
+        padding: 18px;
+        @include flex (column);
+        gap: 45px;
+                
+        &__input{
+            width: 100%;
+        }
+
+        .title{
+            display: flex;
+            justify-content: space-between;
+
+        }
+        .input_title{
+            margin-bottom: 7px;
+        }
+
+        .caution{
+            color: #b57b6d;
+            display: none;
+        }
+
+        .input_label{
+            padding: 0 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;            
+            width: 100%;
+            background-color: $lighter-cyan;
+            cursor: pointer;
+            border-radius: 5px;
+            border: 3px solid $lighter-cyan;
+
+            &:focus-within{
+                border: 3px solid $strong-cyan;
+            }
+        }
+
+        .input{
+            font-size: 2rem;
+            text-align: right;
+            width: 100%;
+            background-color: $lighter-cyan;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        &__select{
+            width: 100%;
+        }
+        
+        .pcTip_input{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap: 16px;
+            grid-row-gap: 16px;
+            justify-content: space-between;
+
+        }
+
+        .tip_selection{
+            width: auto;
+            height: 49px;
+            border-radius: 5px;
+            background-color: $darkest-cyan;
+
+            @include flex(row);
+
+            color: white;
+            font-size: 1.6rem;
+            font-weight: 600;
+            
+            &:hover{
+                background-color: #9fe8df;
+                color: $darkest-cyan;
+            }
+            
+           &__custom{
+               font-size: 1.6rem;
+               height: 100%;
+               width: 100%;
+               overflow: hidden;
+               background-color: $lighter-cyan;
+               color: $darkest-cyan;
+               text-align: right;
+               padding: 0 7px;
+               border: 3px solid $lighter-cyan;
+               border-radius: 5px;
+
+                &:focus{
+                    border: 3px solid $strong-cyan;
+                }
+               &::placeholder{
+                   color: $dark-cyan;
+                   text-align: center;
+               }
+           }
+        }
+
+        
+        .pcTip_input input[type="radio"]:checked + label{
+            background-color: $strong-cyan;
+            color: $darkest-cyan;
+        }
+        
+    }
+    
+    &_results{
+        width: 50%;
+        height: 100%;
+        border-radius: 15px;
+        background-color: $darkest-cyan;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 40px;
+        
+        &__result{
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-row-gap: 40px;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20px;
+
+            .title_above{
+                font-size: 1rem;
+                color: $white;
+                font-weight: bold;
+            }
+            .title_below{
+                color: $strong-cyan;
+                font-size: 0.8rem
+            }            
+
+            h2{
+                color:$strong-cyan;
+                text-align: right;
+                font-size: 2.5rem;
+            }
+            .result{
+                @include flex(row);
+                color: $strong-cyan;
+                
+                h2{
+                    font-size: 2.5rem;
+                }
+            }
+            
+        }
+        
+        #resetBtn{
+            height: 50px;
+            border-radius: 10px;
+            background-color: #0d686d;
+            border:none;
+            color: #045d63;
+            font-weight: bold;
+            font-size: 1.2rem;
+
+            &:hover{
+                background-color: #9fe8df;
+                color: $darkest-cyan;
+            }
+        }
+        
+        .activeBtn{
+            background-color: $strong-cyan!important;
+        }
+    }
+}
+
+
+//responsive for mobile
+
+@media only screen and (max-width:375px) {
+    html{
+        font-size: 15px;
+    }
+    .main{
+        height: auto;
+    }
+    .container{
+        padding: 35px 23px;
+        flex-direction: column;
+        width: 100%;
+        border-radius: 15px 15px 0 0 ;
+
+        &_inputs{
+            width: 100%;
+            gap:30px;
+        }
+
+        &_results{
+            width: 100%;
+            padding: 24px;
+            grid-row-gap: 25px;
+        }
+    }
+}

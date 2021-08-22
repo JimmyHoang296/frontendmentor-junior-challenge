@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+<body>
+
+  <section class="main">
+
+    <img src="./images/logo.svg" alt="" class="logo">
+
+    <div class="container">
+
+      <div class="container_inputs">
+
+        <div class="container_inputs__input">
+          <div class="title">
+            <span class="input_title" >Bill</span>
+            <span class="caution" id="caution_bill">Can't be zero</span>
+          </div>
+          <label for="bill_input" class="input_label">
+            <img src="./images/icon-dollar.svg" alt="">
+            <input type="text" name="bill" id="bill_input" class="input" size = "number" value="">
+          </label>
+        </div>
+        
+        <div class="container_inputs__input">
+          <div class="title">
+            <span class="input_title" >Select Tip %</span>
+            <span class="caution" id = "caution_percent">Can't be zero</span>
+          </div>
+          <div class="pcTip_input">
+
+            <input type="radio" name="tip_selection" id="select1" value="5">
+            <label for="select1" class = "tip_selection">5%</label>
+
+            <input type="radio" name="tip_selection" id="select2" value="10">
+            <label for="select2" class = "tip_selection">10%</label>
+
+            <input type="radio" name="tip_selection" id="select3" value="15">
+            <label for="select3" class = "tip_selection">15%</label>
+
+            <input type="radio" name="tip_selection" id="select4" value="25">
+            <label for="select4" class = "tip_selection">25%</label>
+
+            <input type="radio" name="tip_selection" id="select5" value="50">
+            <label for="select5" class = "tip_selection">50%</label>
+
+            
+            <label class = "tip_selection">
+              <input type="text"  class = "tip_selection__custom" id="pcTip_custom" placeholder="Custom" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Custom'">
+            </label>
+            
+         </div>
+        </div>
+        <div class="container_inputs__input">
+          <div class="title">
+            <span class="input_title" >Number of people</span>
+            <span class="caution" id ="caution_people">Can't be zero</span>
+          </div>
+          <label for="noPeople_input" class="input_label">
+            <img src="./images/icon-person.svg" alt="">
+            <input type="text" name="" id="noPeople_input" class="input"  value="">
+          </label>
+        </div>
+        
+      </div>
+      <div class="container_results">
+
+        <div class="container_results__result">
+
+          <div class="title">
+            <p class="title_above">Tip Amount</p>
+            <p class="title_below">/ person</p>
+          </div>
+          
+          <h2 id="person_amount">$0.00</h2>
+          
+
+          <div class="title">
+            <p class="title_above">Total</p>
+            <p class="title_below">/ person</p>
+          </div>
+          
+            <h2 id="total_amount">$0.00</h2>
+          
+
+        </div>
+
+        <button id =  "resetBtn" >RESET</button>
+      </div>
+
+    </div>
+  </section>
+    
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Jimmy Hoang</a>.
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>

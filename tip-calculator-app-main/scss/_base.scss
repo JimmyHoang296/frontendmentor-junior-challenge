@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+// variables
+
+//color
+
+$strong-cyan: hsl(172, 67%, 45%);
+$darkest-cyan: hsl(183, 100%, 15%);
+$darker-cyan: hsl(186, 14%, 43%);
+$dark-cyan: hsl(184, 14%, 56%);
+$light-cyan: hsl(185, 41%, 84%);
+$lighter-cyan: hsl(189, 41%, 97%);
+$white: hsl(0, 0%, 100%);
+
+//font
+
+//reset
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Mono', monospace;
+    color: $darkest-cyan;
+    font-weight: bold;
+}
+
+input{
+    outline: none;
+    border:none;
+    cursor: pointer;
+}
+
+input[type="radio"]{
+    display: none;
+    cursor: pointer;
+}
+label{
+    cursor: pointer;
+}
