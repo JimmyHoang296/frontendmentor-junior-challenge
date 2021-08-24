@@ -30,16 +30,14 @@ label {
 
 body {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
 }
 
 .main {
   width: 100vw;
-  height: 100vh;
-  margin: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
+  min-height: 100vh;
+  height: auto;
   background-color: #c5e4e7;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -334,7 +332,7 @@ body {
   background-color: #26c0ab !important;
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 425px) {
   html {
     font-size: 15px;
   }
