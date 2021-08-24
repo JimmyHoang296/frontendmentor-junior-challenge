@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap');
+//variable
+
+$Soft-red: hsl(7, 99%, 70%);
+$Yellow: hsl(51, 100%, 49%);
+$Darker-cyan: hsl(167, 40%, 24%); // (graphic design text)
+$Dark-blue : hsl(198, 62%, 26%); //(photography text)
+$Dark-cyan: hsl(168, 34%, 41%); // (footer)
+
+$Very-dark-desaturated-blue: hsl(212, 27%, 19%);
+$Very-dark-grayish-blue: hsl(213, 9%, 39%);
+$Dark-grayish-blue: hsl(232, 10%, 55%);
+$Grayish-blue: hsl(210, 4%, 67%);
+$White: hsl(0, 0%, 100%);
+
+// - Font size: 18px
+
+// ### Font
+
+$primary-font: 'Fraunces', serif;
+$secondary-font: 'Barlow', sans-serif;
+
+//Reset
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style-type: none;    
+}
+h1, h2, h3, h4, h5{
+    font-family: $primary-font;
+    color: $Very-dark-desaturated-blue;
+}
+
+ul, p {
+    font-family: $secondary-font;
+    color: $Very-dark-desaturated-blue;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    display: inline-block;
+}
+
+a:hover{
+    transform: scale(1.1);
+}
