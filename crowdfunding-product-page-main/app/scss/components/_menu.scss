@@ -1,0 +1,49 @@
+
+.header{
+
+    .logo{
+        z-index: 1;
+    }
+
+    .hamberger{
+        z-index: 1;
+    }
+
+    .header_nav{
+        visibility: hidden;
+        display: block;
+        position:fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+        width: 100%;
+        height: 100vh;
+        
+        .nav{
+            position: relative;
+            margin: 90px 25px 0 25px;
+            width: auto;
+            border-radius: 10px;
+            background-color: white;
+
+            li{
+                border-bottom: 1px solid lightgray;
+            }
+            li:last-child{
+                border:none;
+            }
+            a{
+                display: inline-block;
+                font-weight: 500;
+                color: black;
+                font-size: 1.15rem;
+                padding: 25px 25px;
+                width: 100%;
+                overflow: hidden;
+                cursor: pointer;
+
+            }
+        }
+        
+    }
+}

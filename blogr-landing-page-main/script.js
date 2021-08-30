@@ -13,7 +13,6 @@ hideDropDown (company, company_dropdown)
 hideDropDown (connect, connect_dropdown)
 
 
-
 function showDropDown (nav, dropdown) {
     nav.addEventListener('click', ()=>{
         dropdown.style.display = dropdown.style.display=="none" ? 'flex':'none';
