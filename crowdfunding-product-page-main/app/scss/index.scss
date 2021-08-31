@@ -5,12 +5,16 @@ body{
     margin: 0;
     padding: 0;
 }
+
 .wrapper{
     padding: 30px 26px;
     display: flex;
     flex-direction: column;
     background : url(../../images/image-hero-mobile.jpg) no-repeat top center, #fafafa;
     background-size: contain;
+    position: relative;
+    
+    
 }
 
 .header{

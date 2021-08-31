@@ -1,27 +1,142 @@
 
 .modal_wrapper{
+    // display: none;
     position:absolute;
     top:0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: auto;
     z-index: 1;
     background-color: rgba($color: #000000, $alpha: 0.5);
+    
     
 }
 
 .modal{
     margin: 90px 26px;
+    padding: 24px;
+    border-radius: 10px;
+    border: 1px solid lightgray;
     
+
     &_header{
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 30px;
+        font-size: 0.85rem;
     }
-
+    
     p{
         margin-bottom: 25px;
+        font-size: 0.85rem;
+    }
+
+    &_card{
+        display: block;
+        position: relative;
+        padding: 30px 24px 0px 24px;
+        border-radius: 10px;
+        border: 1px solid lightgray;
+        margin-bottom: 25px;
+
+        &_header{
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+
+            .toggle_btn{
+                display: inline-block;
+                width: 25px;
+                height: 25px;
+                border-radius: 100px;
+                border: 1px solid lightgray;
+                margin-right: 15px;
+            }
+            .modal_card_title{
+                font-size: 0.9rem;
+                font-weight: 700;
+            }
+            
+            .modal_card_price{
+                font-size: 0.9rem;
+                font-weight: 500;
+                margin-top: 10px;
+                color: #3cb4ab;
+            }
+
+            
+        }
+        .modal_card_count{
+            display: flex;
+            align-items: center;
+            span{
+                font-size: 1.2rem;
+                font-weight: bold;
+                margin-right: 5px;
+            }
+        }
+
+        .modal_selected{
+            display: none;
+            .line {
+                position: absolute;
+                left: 0;
+                width: 100%;
+                border-bottom: 1px solid lightgray;
+            }
+            &__header{
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+                margin-top: 20px;
+            }
+            .modal_btn{
+                display: flex;
+                justify-content: space-between;
+                gap: 10px;
+                margin-bottom: 25px;
+                
+            }
+
+            .modal_input{
+                height: 48px;
+                width: 100px;
+                border-radius: 25px;
+                border: 1px solid lightgray;
+                padding-left: 24px;
+                display: flex;
+                align-items: center;
+                color: lightgray;
+                
+                // padding: 25px;
+                span{
+                    display: block;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    padding-bottom: 2px;
+                    color: lightgray;
+                    
+                }
+                input{
+                    content: "25";
+                    display: block;
+                    border: none;
+                    outline: none;
+                    width: 50%;
+                    margin-left: 7px;
+                    font-weight: bold;
+                    font-size: 1rem;
+                    padding: 0;
+                    line-height: 0.9;
+                }
+                
+            }
+            .secondary_btn{
+                width: 125px;
+            }
+
+        }
     }
 
     .details_card{
