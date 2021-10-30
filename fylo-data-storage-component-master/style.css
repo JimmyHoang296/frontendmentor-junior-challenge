@@ -1,0 +1,189 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(./images/bg-desktop.png) center bottom no-repeat;
+    background-color: hsl(229, 57%, 11%);
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+}
+
+.card{
+    display: flex;
+    align-items: flex-end;
+    width: 90%;
+    max-width: 920px;
+    gap: 33px;
+}
+
+.card-icon{
+    width: 39%;
+    padding: 40px;
+    max-width: 350px;
+    border-radius: 10px 90px 10px 10px;
+    background-color: hsl(228, 56%, 26%);
+}
+
+.logo-img{
+    margin-bottom: 30px;
+    height: 40px;
+}
+
+.item-icons{
+    display: flex;
+    gap:15px;
+}
+
+.icon-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 12px;
+    background-color: hsl(229, 57%, 11%);
+}
+
+.card-info{
+    position: relative;
+    width: 59%;
+    max-width: 540px;
+    border-radius: 10px;
+    padding: 40px 35px;
+    background-color: hsl(228, 56%, 26%);
+    color: hsl(243, 100%, 93%);
+}
+
+.infor-header{
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.infor-header > span{
+    font-weight: 700;
+}
+
+.infor-progress{
+    position: relative;
+}
+
+.progress{
+    position: relative;
+    margin-bottom: 8px;
+    width: 100%;
+    height: 21px;
+    border: 2px solid hsl(229, 57%, 11%);
+    border-radius: 10px;
+    background-color: hsl(229, 57%, 11%);
+}
+
+.progress::after{
+    position:absolute;
+    top: 1px;
+    left: 2px;
+    content: "";
+    width: 80%;
+    height: 15px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, hsl(6, 100%, 80%),  hsl(335, 100%, 65%));
+}
+
+.progress::before{
+    content: "";
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    top: 3px;
+    right: 20%;
+    border-radius: 10px;
+    background-color: #fff;
+    z-index: 100;
+}
+
+.progress-start{
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.progress-end{
+    float:right;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.infor-modal{
+    position: absolute;
+    right: 0;
+    top: -120px;
+    padding: 13px 25px;
+    border-radius: 10px 10px 0 10px;
+    background-color: white;
+}
+
+.modal-header{
+    color: #aaa;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+
+.infor-modal::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+    border-left: 20px solid hsl(228, 56%, 26%);
+    border-top: 20px solid white;
+}
+
+.modal-header > span{
+    font-size: 40px;
+    font-weight: 700;
+    color: #000;
+    margin-right: 10px;
+}
+
+@media (max-width:375px){
+    main{
+        background: url(./images/bg-mobile.png) center right repeat;
+        background-size: cover;
+    }
+    .card{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .card-icon{
+        width: 100%;
+    }
+
+    .card-info{
+        width: 100%;
+        padding-bottom: 50px;
+    }
+
+    .infor-header{
+        text-align: center;
+    }
+    .infor-modal{
+        top: auto;
+        bottom: -90px;
+        right: 50%;
+        border-radius: 10px;
+        transform: translateX(50%);
+        min-width: 190px;
+    }
+    .infor-modal::after{
+        display: none;
+    }
+}
