@@ -156,9 +156,6 @@ main{
         grid-template-columns: auto;
     }
 
-    .user{
-
-    }
     .user-infor{
         padding: 33px;
         display: grid;
