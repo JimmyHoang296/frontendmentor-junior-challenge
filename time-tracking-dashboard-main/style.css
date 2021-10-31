@@ -1,0 +1,216 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: hsl(226, 43%, 10%);
+    font-family: 'Rubik', sans-serif;
+    color: hsl(236, 100%, 87%);
+    font-style: 18px;
+}
+
+.card-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-column-gap: 27px;
+    grid-row-gap: 27px;
+    width: 90%;
+    max-width: 1120px;
+}
+
+.user{
+    grid-column: 1/2;
+    grid-row: 1/3;
+    border-radius: 10px;
+    background-color:  hsl(235, 46%, 20%);
+}
+.user-infor{
+    padding: 33px 24px;
+    background-color: hsl(246, 80%, 60%);
+    border-radius: 15px;
+}
+.user-infor__img{
+    margin-bottom: 40px;
+    width: 85px;
+    height: 85px;
+    border-radius: 50px;
+    border: 3px solid white;
+}
+
+.avatar{
+    height: 100%;
+}
+.user-infor__sub-head{
+    font-size: 15px;
+    font-weight: 300;
+}
+.user-infor__user-name{
+    font-size: 37px;
+    font-weight: 300;
+    line-height: 1.3;
+    color: white;
+    margin-bottom: 47px;
+}
+.period-list{
+    padding: 32px 24px;
+    display: grid;
+    grid-template-columns: 1;
+    grid-row-gap: 20px;
+    color: hsl(235, 45%, 61%);
+}
+.period-selector{
+    font-size: 18px;
+    font-weight: 300;
+    transition: ease-in-out 0.2s;
+}
+
+.period-selector:hover{
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.selected{
+    color:white;
+    font-weight: 400;
+}
+
+.card{
+    border-radius: 15px;
+    padding-top: 45px;
+    overflow: hidden;
+}
+
+.card-infor{
+    display: grid;
+    grid-template-columns: auto auto;
+    height: 100%;
+    padding: 30px;
+    border-radius: 15px 15px 10px 10px;
+    background-color: hsl(235, 46%, 20%);
+    color: white;
+}
+
+.card-infor__title{
+    font-size: 18px;
+    font-weight: 400;
+}
+.card-infor__menu-btn{
+    justify-self: right;
+    margin-top: 10px;
+}
+.card-infor__current-status{
+    grid-column: 1/3;
+    font-size: 54px;
+    font-weight: 300;
+    margin-top: 21px;
+    margin-bottom: 5px;
+}
+.card-infor__history{
+    font-size: 14px;
+    color: hsl(236, 100%, 87%);
+}
+
+#work{
+    background: url(./images/icon-work.svg) 90% -10px no-repeat;
+    background-color: hsl(15, 100%, 70%);   
+
+}
+#play{
+    background: url(./images/icon-play.svg) 90% -10px no-repeat;
+    background-color: hsl(195, 74%, 62%);   
+
+}
+#study{
+    background: url(./images/icon-study.svg) 90% -10px no-repeat;
+    background-color: hsl(348, 100%, 68%);   
+
+}
+#exercise{
+    background: url(./images/icon-exercise.svg) 90% -10px no-repeat;
+    background-color: hsl(145, 58%, 55%);   
+
+}
+#social{
+    background: url(./images/icon-social.svg) 90% -10px no-repeat;
+    background-color: hsl(264, 64%, 52%);   
+
+}
+#self-care{
+    background: url(./images/icon-self-care.svg) right top no-repeat;
+    background-color: hsl(43, 84%, 65%);   
+
+}
+
+@media (max-width:375px){
+    main{
+        padding: 80px 25px;
+    }
+    .card-container{
+        width: 100%;
+        grid-template-columns: auto;
+    }
+
+    .user{
+
+    }
+    .user-infor{
+        padding: 33px;
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .user-infor__img{
+        grid-row: 1/3;
+        margin-bottom: 0;
+        height: 67px;
+        width: 67px;
+        align-self: center;
+    }
+
+    .user-infor__sub-head{
+        font-size: 13px;
+        align-self: center;
+    }
+
+    .user-infor__user-name{
+        font-size: 22px;
+        align-self: top;
+        margin: 0;
+    }
+
+    .period-list{
+        display: flex;
+        justify-content: space-between;
+        padding: 24px 17px;
+        font-size: 14px;
+    }
+
+    .card{
+        padding-top: 35px;
+    }
+
+    .card-infor{
+        padding: 25px 25px;
+    }
+
+    .card-infor__title{
+        font-size: 18px;
+    }
+    .card-infor__current-status{
+        grid-column: 1/2;
+        font-size: 30px;
+        margin-top: 10px;
+    }
+
+    .card-infor__history{
+        grid-column: 2/3;
+        justify-self: end;
+        align-self: center;
+    }
+}

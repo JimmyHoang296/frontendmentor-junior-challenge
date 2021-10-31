@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Time tracking dashboard</title>
+</head>
+<body>
+<main>
+  <div class="card-container">
+    <div class="user">
+      <div class="user-infor">
+        <div class="user-infor__img">
+          <img src="./images/image-jeremy.png" alt="user image" class="avatar">
+        </div>
+        <p class="user-infor__sub-head">Report for</p>
+        <h3 class="user-infor__user-name">Jeremy Robson</h3>
+      </div>
+      <div class="period-list">
+        <h4 class="period-selector selected">Daily</h4>
+        <h4 class="period-selector">Weekly</h4>
+        <h4 class="period-selector">Monthly</h4>
+      </div>
+    </div>
+
+    <div class="card" id="work">
+      <div class="card-infor">
+        <h4 class="card-infor__title">Work</h4>
+        <img src="./images/icon-ellipsis.svg" alt="menu button" class="card-infor__menu-btn">
+        <h2 class="card-infor__current-status">32hrs</h2>
+        <p class="card-infor__history">Last Week - 36hrs</p>
+      </div>
+    </div>
+    <div class="card" id="play">
+      <div class="card-infor">
+        <h4 class="card-infor__title">Play</h4>
+        <img src="./images/icon-ellipsis.svg" alt="menu button" class="card-infor__menu-btn">
+        <h2 class="card-infor__current-status">10hrs</h2>
+        <p class="card-infor__history">Last Week - 8hrs</p>
+      </div>
+    </div>
+    <div class="card" id="study">
+      <div class="card-infor">
+        <h4 class="card-infor__title">Study</h4>
+        <img src="./images/icon-ellipsis.svg" alt="menu button" class="card-infor__menu-btn">
+        <h2 class="card-infor__current-status">4hrs</h2>
+        <p class="card-infor__history">Last Week - 7hrs</p>
+      </div>
+    </div>
+    <div class="card" id="exercise">
+      <div class="card-infor">
+        <h4 class="card-infor__title">Exercise</h4>
+        <img src="./images/icon-ellipsis.svg" alt="menu button" class="card-infor__menu-btn">
+        <h2 class="card-infor__current-status">4hrs</h2>
+        <p class="card-infor__history">Last Week - 4hrs</p>
+      </div>
+    </div>
+    <div class="card" id="social">
+      <div class="card-infor">
+        <h4 class="card-infor__title">Social</h4>
+        <img src="./images/icon-ellipsis.svg" alt="menu button" class="card-infor__menu-btn">
+        <h2 class="card-infor__current-status">5hrs</h2>
+        <p class="card-infor__history">Last Week - 10hrs</p>
+      </div>
+    </div>
+    <div class="card" id="self-care">
+      <div class="card-infor">
+        <h4 class="card-infor__title">Self Care</h4>
+        <img src="./images/icon-ellipsis.svg" alt="menu button" class="card-infor__menu-btn">
+        <h2 class="card-infor__current-status">2hrs</h2>
+        <p class="card-infor__history">Last Week - 2hrs</p>
+      </div>
+    </div>
+  </div>
+</main>
+   <script src="./script.js"></script>
+</body>
+</html>
