@@ -87,11 +87,19 @@ header{
     opacity: 0.8;
 }
 
-.header-nav{
+.header-nav-bar{
     float: right;
     display: flex;
     align-items: center;
     gap: 47px;
+}
+
+.header-nav-bar a{
+    font-weight: 600;
+}
+
+.header-nav-bar li:hover{
+    cursor: pointer;
 }
 
 .header-hamberger{
@@ -130,6 +138,7 @@ header{
     align-self: center;
     justify-self: center;
     margin: 10px;
+    background-color: #fffbf8;
 }
 
 .about__target-header{
@@ -151,7 +160,8 @@ header{
     font-family: 'Fraunces', serif; 
     font-size: 16px;
     font-weight: 900;
-    color: var(--dark-blue)
+    color: var(--dark-blue);
+    transition: ease-in-out 0.2s;
 }
 
 .learn-more::before{
@@ -164,6 +174,11 @@ header{
     position: absolute;
     opacity: 0.4;
     z-index: -10;
+}
+
+.learn-more:hover{
+    cursor: pointer;
+    opacity: 0.8;
 }
 
 .red::before{
@@ -233,6 +248,7 @@ header{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 35px;
+    background-color: #fffbf8;
 }
 
 .project-header{
@@ -289,10 +305,211 @@ header{
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-.gallery-desktop{
+.gallery-img{
     width: 100%;
 }
 
-.gallery-mobile{
-    display: none;
+/* footer */
+
+footer{
+    display: grid;
+    padding: 65px;
+    background-color: #90d4c5;
+    justify-content: center;
+}
+
+.footer-logo{
+    margin-bottom: 32px;
+    height: 50px;
+    font-size: 34px;
+    font-weight: bold;
+    color: var(--mid-cyan);
+    justify-self: center;
+}
+
+.footer_nav{
+    margin-bottom: 80px;
+    display: flex;
+    gap: 80px;
+}
+
+.footer_nav a{
+    color: var(--mid-cyan);
+    font-weight: 600;
+    font-size: 19px;
+    transition: ease-in-out 0.2s;
+}
+
+.social-list i:hover,
+.footer_nav a:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.social-list{
+    justify-self: center;
+    display: flex;
+    gap: 30px;
+}
+
+.social-list i{
+    font-size: 24px;
+    color: var(--dark-cyan);
+    transition: ease-in-out 0.2s;
+}
+
+@media (max-width:375px){
+    main{
+        width: 100%;
+    }
+    header{
+        padding: 30px 25px;
+    }
+
+    .header-logo{
+        margin-top: 0;
+        height: 24px;
+    }
+    .header-nav-bar{
+        display: none;
+    }
+
+    /* modale */
+    .header-nav-bar{
+        position:fixed;
+        top: 105px;
+        left: 25px;
+        right: 25px;
+        /* background-color: #fffbf8; */
+        text-align: center;
+        flex-direction: column;
+        gap: 35px;
+        background-color: #fffbf8;
+        padding: 40px 30px 30px 30px;
+        transition: ease-in-out 0.2s;
+    }
+    
+    .header-nav-bar::before{
+        content: "";
+        position: absolute;
+        right: 0;
+        top:-24px;
+        border-bottom: 24px solid #fffbf8;
+        border-left: 24px solid transparent;
+    }
+    .header-nav-bar li{
+        color: var(--light-blue);
+        z-index: 999;
+    }
+
+    #contact{
+        background-color: var(--yellow);
+    }
+
+    .header-hamberger{
+        display: block;
+        float: right;
+    }
+
+    .active{
+        display: flex;
+    }
+
+    .hero{
+        background: url(./images/mobile/image-header.jpg) center bottom no-repeat;
+        background-size: cover;
+        background-color: #3dbeff ;
+    }
+
+    .hero-header{
+        margin-bottom: 40px;
+        font-size: 40px;
+        letter-spacing: 8px;
+    }
+
+    .arrow{
+        margin-top: 0;
+        margin-bottom: 130px;
+    }
+
+    .about{
+        grid-template-columns: 1fr;
+    }
+
+    .desktop{
+        display: none;
+    }
+
+    .about-img{
+        width: 100%;
+    }
+
+    .mobile{
+        display: block;
+    }
+
+    .about__target{
+        text-align: center;
+        padding: 65px 25px;
+        margin: 0;
+    }
+
+    .about__target-header{
+        font-weight: 900;
+        margin-bottom: 20px;
+    }
+
+    .services{
+        grid-template-columns: 1fr;
+    }
+
+    .service-header{
+        text-align: center;
+        width: 100%;
+        font-size: 28px;
+    }
+    .service-text{
+        width: 100%;
+    }
+    .project{
+        display: flex;
+        flex-direction: column;
+        padding: 68px 25px 20px 25px;
+    }
+
+    .project-header{
+        font-size: 16px;
+        margin-bottom: 65px;
+    }
+
+    .client-img{
+        margin-bottom: 37px;
+    }
+
+    .client-comment{
+        margin-bottom: 35px;
+    }
+
+    .client-title{
+        margin-bottom: 65px;
+    }
+
+    .gallery{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    footer{
+        padding: 60px 36px;
+    }
+
+    .footer-logo{
+        line-height: 1;
+        margin-bottom: 30px;
+    }
+    .footer_nav{
+        gap :57px;
+        margin-bottom: 85px;
+    }
+
+
 }
