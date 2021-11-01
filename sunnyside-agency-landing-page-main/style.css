@@ -358,6 +358,9 @@ footer{
     transition: ease-in-out 0.2s;
 }
 
+.mobile{
+    display: none;
+}
 @media (max-width:375px){
     main{
         width: 100%;
