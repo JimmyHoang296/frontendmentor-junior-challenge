@@ -27,6 +27,7 @@
         <li><a href="#" class="header-nav-link">Get Started</a></li>
       </ul>
       <img src="./images/icon-hamburger.svg" alt="hamberger button" class="hamberger-btn">
+      <img src="./images/icon-close-menu.svg" alt="" class="header-close-btn">
     </header>
 
     <!-- hero start -->
@@ -35,15 +36,20 @@
       <h1 class="hero-header">Mastercraft Bamboo Monitor Riser</h1>
       <p class="hero-text">A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
       <div class="flex">
-        <button class="primary-btn">Back this project</button>
+        <button class="primary-btn" id="back-this-project">Back this project</button>
         <div class="bookmark-btn">
           <div class="bookmark-btn-icon">
-            <img src="./images/icon-bookmark.svg" alt="bookmark icon">
+            <!-- <img src="./images/icon-bookmark.svg" alt="bookmark icon"> -->
+            <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg">
+              <g fill="none" fill-rule="evenodd">
+                <circle fill="#2F2F2F" cx="28" cy="28" r="28" />
+                <path fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z" />
+              </g>
+            </svg>
           </div>
-          Bookmark
           <span>Bookmark</span>
         </div>
-    </div>
+      </div>
     </div>
 
     <!-- stat start -->
@@ -63,7 +69,7 @@
           <h2 class="stat-number">56</h2>
           <p class="stat-target para-text">days left</p>
         </div>
-    </div>
+      </div>
       <div class="stat-progress-bar"></div>
     </div>
 
@@ -91,7 +97,7 @@
           You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
           you’ll be added to a special Backer member list.
         </p>
-        <h2 class="modal-product-left"> <span class="number">101</span> <span class="left">left</span></h2>
+        <h2 class="product-left"> <span class="number">101</span> <span class="left">left</span></h2>
 
         <button class="reward-btn primary-btn">Select Reward</button>
       </div>
@@ -106,7 +112,7 @@
           You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
           member list. Shipping is included.
         </p>
-        <h2 class="modal-product-left"> <span class="number">64</span> <span class="left">left</span></h2>
+        <h2 class="product-left"> <span class="number">64</span> <span class="left">left</span></h2>
         <button class="reward-btn primary-btn">Select Reward</button>
       </div>
       <div class="about-product disable">
@@ -120,7 +126,7 @@
           You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added to
           our Backer member list. Shipping is included.
         </p>
-        <h2 class="modal-product-left"> <span class="number">0</span> <span class="left">left</span></h2>
+        <h2 class="product-left"> <span class="number">0</span> <span class="left">left</span></h2>
         <button class="reward-btn primary-btn out-stock">Out of Stock</button>
       </div>
     </div>
@@ -129,7 +135,8 @@
   <!-- Selection modal start -->
   <div class="modal-container">
     <div class="modal block">
-      <img src="./images/icon-close-modal.svg" alt="close button" id="close-btn">
+      <svg id="close-btn" width="15" height="15" xmlns="http://www.w3.org/2000/svg"><path d="M11.314 0l2.828 2.828L9.9 7.071l4.243 4.243-2.828 2.828L7.07 9.9l-4.243 4.243L0 11.314 4.242 7.07 0 2.828 2.828 0l4.243 4.242L11.314 0z" fill="#000" fill-rule="evenodd" opacity=".4"/></svg>
+
       <h2 class="modal-header header-text">
         Back this project
       </h2>
@@ -170,7 +177,8 @@
           You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
           you’ll be added to a special Backer member list.
         </p>
-        <h2 class="modal-product-left fix-top" > <span class="modal-number">101</span> <span class="left">left</span></h2>
+        <h2 class="modal-product-left fix-top"> <span class="modal-number">101</span> <span class="left">left</span>
+        </h2>
         <!-- pledge select -->
         <div class="pledge-select">
           <h3 class="pledge-header para-text">
