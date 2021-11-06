@@ -84,7 +84,7 @@ main{
         align-items: center;
         flex-direction: column;
         background: url(./images/image-hero-desktop.jpg) center top no-repeat;
-        background-size: contain;
+        background-size: auto;
         background-color: #fafafa;
     }
 
@@ -126,7 +126,7 @@ header{
 }
 
 .header-nav-link{
-    display: block;
+    display: inline-block;
     text-decoration: none;
     color: black;
     font-weight: 700;
@@ -162,9 +162,21 @@ header{
 
     .header-nav-list{
         display: flex;
+        position: static;
+        background-color: unset;
         font-size: 14px;
         font-weight: 400;
         gap: 30px;
+    }
+
+    .header-nav-list li{
+        border-bottom: unset;
+    }
+
+    .header-nav-link{
+        color:white;
+        padding: unset;
+
     }
 
     .hamberger-btn{
@@ -216,6 +228,9 @@ header{
 }
 
 @media (min-width: 440px) {
+    .hero{
+        margin-top: 300px;
+    }
     .hero-header{
         font-size: 30px;
         margin-bottom: 15px;
