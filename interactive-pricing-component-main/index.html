@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Interactive pricing component</title>
+
+</head>
+
+<body>
+  <main>
+    <div class="hero">
+      <h1 class="hero-header">Simple, traffic-based pricing</h1>
+      <p class="hero-text">Sign-up for our 30-day trial. <br> No credit card required. </p>
+    </div>
+    <div class="card">
+      <p class="card-header"><span class="pageview-number">100k</span> Pageviews</p>
+
+      <div class="wrap">
+        <input type="range" class="range" min="1" max="100" step="1" value="50">
+        <div class="track">
+          <div class="track-inner"></div>
+        </div>
+        <div class="thumb"></div>
+      </div>
+
+      <div class="card-price"><span class="monthly-price">$16.00</span> / month</div>
+      <div class="card-toggle">
+        Monthly Billing
+        <label class="switch">
+          <input type="checkbox" class="checkbox-yearly" >
+          <span class="toggle"></span>
+        </label>
+
+        Yearly Billing
+        <span class="discount-rate">-25%</span>
+      </div>
+
+      <div class="grid">
+        <ul class="card-props">
+          <li><img src="./images/icon-check.svg" alt=""> Unlimited websites</li>
+          <li><img src="./images/icon-check.svg" alt=""> 100% data ownership</li>
+          <li><img src="./images/icon-check.svg" alt=""> Email reports</li>
+        </ul>
+        <button class="card-btn">Start my trial</button>
+      </div>
+    </div>
+  </main>
+  <script src="./script.js"></script>
+</body>
+
+</html>
