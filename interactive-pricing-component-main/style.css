@@ -249,6 +249,10 @@ main{
 
 @media (min-width: 441px){
 
+    main{
+        background: url(./images/pattern-circles.svg) center 57px no-repeat, url(./images/bg-pattern.svg) center top no-repeat ;
+        background-color: var(--cl-main-bg);
+    }
     .hero-header{
         font-size: 28px;
     }
