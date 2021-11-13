@@ -318,6 +318,13 @@ p{
         grid-gap: 30px;
     }
 
+    .product-card__header{
+        font-size: 32px;
+        left: 40px;
+        bottom: 35px;
+        width: 180px;
+    }
+
     .see-all-btn:hover{
         cursor: pointer;
         background-color: black;
