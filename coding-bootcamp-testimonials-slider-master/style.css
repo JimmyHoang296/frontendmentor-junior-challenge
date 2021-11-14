@@ -1,0 +1,183 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-family: 'Inter', sans-serif;
+    color:hsl(240, 38%, 20%);
+}
+
+.main{
+    position: relative;
+    max-width: 1440px;
+    min-height: 100vh;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 25px 34px 70px;
+
+    background: 
+        url(./images/pattern-curve.svg) -50px bottom no-repeat;
+    background-size: contain;
+
+    text-align: center;
+}
+
+.card{
+    animation-name: entrance;
+    animation-duration: 2s;
+}
+
+.card-header-img{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 57px;
+    padding-top: 30px;
+    background: 
+    url(./images/pattern-bg.svg) center top no-repeat;
+    background-size: contain;
+}
+
+.card-header-img>img{
+    width: 75%;
+}
+.card-review{
+    padding-top: 30px;
+    margin-bottom: 20px;
+
+    background:
+        url(./images/pattern-quotes.svg) center top no-repeat;
+    background-size: 60px;
+
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 1.35;
+}
+
+
+.name{
+    font-size: 16px;
+}
+
+.title{
+    font-size: 15px;
+    opacity: 0.25;
+}
+
+.slider-btn{
+    display: flex;
+    position: absolute;
+    top: 42.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 0 15px 0 hsl(240, 18%, 77%);
+}
+
+.slider-btn button{
+    display: block;
+    border: none;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+}
+
+.slider-to-left{
+    background: url(./images/icon-prev.svg) center center no-repeat;
+    background-size: 10px;
+    transition: ease-in-out 0.2s;
+}
+
+.slider-to-left:hover{
+    transform: translateX(-5px);
+    cursor: pointer;
+    box-shadow: 0 0 5px 0 hsl(240, 18%, 77%);
+    
+}
+.slider-to-right{
+    background: url(./images/icon-next.svg) center center no-repeat;
+    background-size: 10px;
+    transition: ease-in-out 0.2s;
+    
+}
+
+.slider-to-right:hover{
+    transform: translateX(5px);
+    cursor: pointer;
+    box-shadow: 0 0 5px 0 hsl(240, 18%, 77%);
+}
+
+@media (min-width:440px){
+    .main{
+        padding: 50px 70px 170px 165px;
+    }
+
+    .card-header-img{
+        position: absolute;
+        right: 0;
+        bottom: 170px;
+        width: 50%;
+        padding-top: 70px;
+        margin-right: 94px;
+        background-size: cover;
+    }
+
+    .card-infor{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: left;
+    }
+    .card-review{
+        max-width: 640px;
+        padding-top: 70px;
+        background:
+        url(./images/pattern-quotes.svg) 90px top no-repeat;
+        background-size: auto;
+        font-size: 32px;
+        margin-bottom: 35px;
+    }
+
+    .name{
+        display: inline-block;
+        font-size: 20px;
+        margin-right: 10px;
+    }
+    .title{
+        display: inline-block;
+        font-size: 19px;
+    }
+
+    .slider-btn{
+        border-radius: 30px;
+        top: unset;
+        left: unset;
+        bottom: 170px;
+        right: 30%;
+    }
+    .slider-btn button{
+        width: 56px;
+        height: 56px;
+    }
+
+}
+
+.activate{
+    animation-name: entrance;
+    animation-duration: 2s;
+}
+
+
+@keyframes entrance{
+    from {
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
