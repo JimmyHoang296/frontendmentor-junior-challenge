@@ -117,6 +117,7 @@ body{
 
 .dark-theme .toggle-btn::after{
     left: 2px;
+    background-color: var(--bg-top);
 }
 
 @media (min-width: 540px) {
