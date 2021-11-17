@@ -109,7 +109,6 @@ body{
     background-color: white;
     transition: ease-in-out 0.2s;
 
-
 }
 
 .dark-theme .toggle-btn{
@@ -128,6 +127,9 @@ body{
 
         padding-right: 10.5%;
         padding-left: 10.5%;
+    }
+    .main::after{
+        bottom: 135px;
     }
     
     .dashboard-header{
