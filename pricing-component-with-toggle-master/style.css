@@ -1,0 +1,270 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: hsl(233, 13%, 49%);
+}
+
+.main{
+    padding: 65px 25px 70px;
+    text-align: center;
+    background: url(./images/bg-top.svg) 200px -250px no-repeat;
+    background-color: hsl(240, 78%, 98%);
+}
+
+.header{
+    margin-bottom: 40px;
+}
+
+.toggle{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 80px;
+
+    color: hsl(234, 14%, 74%);
+}
+
+
+.toggle-btn{
+    position: relative;
+    height: 30px;
+    width: 56px;
+    border-radius: 30px;
+
+    background: linear-gradient(90deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+
+    transition: ease-in-out 0.2s;
+}
+
+.toggle-btn:hover{
+    cursor: pointer;
+    box-shadow: 0 0 5px 0 hsl(236, 72%, 79%);
+}
+
+.toggle-btn::after{
+    content: "";
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+}
+
+#toggleBtn{
+    /* display: none; */
+}
+
+
+.card-list{
+    display: grid;
+    grid-gap: 30px;
+}
+
+.card{
+    padding: 35px 35px 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 0 hsl(234, 14%, 74%);
+}
+
+.card-title{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.card-price{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 25px;
+    
+    font-size: 70px;
+    color: hsl(232, 13%, 33%);
+
+}
+
+.card-price span{
+    font-size: 40px;
+}
+
+.monthly{
+    display: none;
+}
+
+.card-info p{
+    padding-top: 15px;
+    padding-bottom: 18px;
+    border-top: 1px solid #ddd;
+}
+
+.card-info{
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 32px;
+}
+.btn{
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1px;
+
+    border: 1px solid transparent;
+    background: linear-gradient(90deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color: hsl(240, 78%, 98%);
+
+    transition: ease-in-out 0.4s;
+}
+
+.btn:hover{
+    background: transparent !important;
+    border: 1px solid hsl(233, 13%, 49%);
+    color: hsl(237, 63%, 64%);
+}
+.out-stand{
+    background: linear-gradient(120deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color: white;
+}
+
+.out-stand .card-price{
+    color: white
+}
+
+.out-stand .btn{
+    background: white;
+    color: hsl(237, 63%, 64%);
+}
+
+.out-stand .btn:hover{
+    border: 1px solid white;
+    color: white;
+}
+
+/* desktop view */
+
+@media (min-width: 376px) {
+    .main{
+        max-width: 1440px;
+        margin-right: auto;
+        margin-left: auto;
+        min-height: 100vh;
+
+        background: url(./images/bg-top.svg) right top no-repeat,
+        url(./images/bg-bottom.svg) left bottom no-repeat;
+    }
+    .card-list{
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 0;
+        align-items: center;
+
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 1054px;
+    }
+
+    .card{
+        height: 90%;
+    }
+    .out-stand{
+        height: 100%;
+        padding-top: 60px;
+        padding-bottom: 55px;
+    }
+
+}
+/* change state */
+
+.show-monthly .monthly{
+    display: flex;
+}
+
+.show-monthly .annually{
+    display: none;
+}
+
+#toggleBtn:checked ~ .toggle-btn::after{
+    height: 50px;
+    background-color: black;;
+}
+
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    height: 30px;
+    width: 56px;
+    border-radius: 30px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    -webkit-transition: .4s;
+    transition: .4s;
+
+    box-shadow: 0 0 5px 0 hsl(236, 72%, 79%);
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+      /* background: hsl(236, 72%, 79%); */
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px hsl(234, 14%, 74%);
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
