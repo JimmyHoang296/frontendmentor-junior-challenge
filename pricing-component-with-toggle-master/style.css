@@ -14,7 +14,7 @@ html{
     padding: 65px 25px 70px;
     text-align: center;
     background: url(./images/bg-top.svg) 200px -250px no-repeat;
-    background-color: hsl(240, 78%, 98%);
+    background-color: hsl(233, 13%, 49%);
 }
 
 .header{
@@ -166,6 +166,7 @@ html{
 
         background: url(./images/bg-top.svg) right top no-repeat,
         url(./images/bg-bottom.svg) left bottom no-repeat;
+        background-color: hsl(240, 78%, 98%);
     }
     .card-list{
         grid-template-columns: repeat(3, 1fr);
@@ -187,6 +188,7 @@ html{
     }
 
 }
+
 /* change state */
 
 .show-monthly .monthly{
@@ -268,3 +270,5 @@ html{
   .slider.round:before {
     border-radius: 50%;
   }
+
+  
