@@ -251,7 +251,7 @@ html{
   }
   
   input:focus + .slider {
-    box-shadow: 0 0 1px hsl(234, 14%, 74%);
+    box-shadow: 0 0 10px 0 hsl(237, 63%, 64%);  ;
   }
   
   input:checked + .slider:before {
