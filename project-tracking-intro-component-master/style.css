@@ -1,0 +1,377 @@
+
+:root{
+    --font-text: 'Barlow', sans-serif;
+    --font-header: 'Barlow Condensed', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 18px;
+}
+
+body{
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+body::after{
+    content: "";
+    width: 50%;
+    height: 430px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: hsl(207, 33%, 95%);
+    z-index: -1;
+
+    border-bottom-left-radius: 50px;
+}
+ 
+/* header */
+.header{
+    display: flex;
+    justify-content: space-between;
+
+    padding: 38px 30px 65px;
+    background-color: transparent;
+}
+
+.logo-img{
+    height: 24px;
+}
+
+.header-nav{
+    display: none;
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 313px;
+    border-radius: 5px;
+    background-color: white;
+    padding: 0 25px;
+    text-align: center;
+
+    box-shadow: 0 0 5px 0 hsl(231, 7%, 65%);
+
+    transition: ease-in-out 0.2s;
+}
+
+.nav-list{
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+
+    padding: 25px 0;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-list li{
+    display: block;
+    list-style: none;
+}
+
+.header-nav a{
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    
+    font-family: var(--font-header);
+    color: hsl(230, 29%, 20%);
+    font-weight: 700;
+    transition: ease-in-out 0.2s;
+}
+.header-nav a:hover{
+    text-decoration: underline;
+}
+
+.header-nav input{
+    padding: 25px 0;
+    border: none;
+    background-color: transparent;
+
+    text-transform: uppercase;
+    font-family: var(--font-header);
+    color: hsl(231, 7%, 65%);
+    font-weight: 700;
+    font-size: 18px;
+    outline: none;
+}
+
+.header-nav input:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.hamberger-menu{
+    outline: none;
+    border: none;
+}
+
+.close-btn{
+    display: none;
+}
+
+/* for small screen z fold */
+@media (max-width: 280px){
+    .header-nav{
+        max-width: 260px;
+    }
+}
+/* responsive for midsize */
+@media (min-width: 440px){
+    
+}
+/* responsive for laptop screen */
+@media (min-width: 760px){
+    .header{
+        align-items: center;
+        max-width: 1300px;
+        margin-right: 0;
+        margin-left: auto;
+        padding-left: 25px;
+        padding-top: 65px;
+        padding-bottom: 120px;
+    }
+
+    .header-nav{
+        display: flex;
+
+        position: static;
+        background-color: transparent;
+        box-shadow: none;
+                
+    }
+
+    .nav-list{
+        grid-template-columns: repeat(3,1fr);
+        border: none;
+        grid-gap: 40px;
+        padding: 0;
+        padding-right: 40px;
+        
+    }
+
+    .header-nav a{
+        padding: 0;   
+        margin: 0;
+    }
+
+    .header-nav input{
+        padding: 0;
+        margin-left: 40px;
+        position: relative;
+    }
+
+    .header-nav span{
+        display: block;
+        height: 6px;
+        width: 6px;
+        border-radius: 50%;
+        background-color: hsl(231, 7%, 65%);
+        position: absolute;
+        top: 8px;
+        right: -6px;
+    }
+
+    .hamberger-menu{
+        display: none;
+    }
+}
+
+/* main */
+.main{
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.hero{
+    padding:0 30px;
+}
+
+.hero-img{
+    margin-left: -30px;
+    width: 100%;
+    margin-bottom: 75px;
+}
+
+.hero-img > img{
+    display: block;
+    width: 520px;
+}
+
+.hero-title{
+    margin-bottom: 20px;
+
+    text-transform: uppercase;
+    font-family: var(--font-header);
+    font-weight: 400;
+    color: hsl(231, 7%, 65%);
+    letter-spacing: 4px;
+    font-size: 16px;
+}
+
+.hero-title span{
+    padding: 3px 13px;
+    border-radius: 15px;
+    background-color: hsl(230, 29%, 20%);
+    color: hsl(207, 33%, 95%);
+
+    max-width: 54px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+.hero-caption{
+    margin-bottom: 15px;
+
+    text-transform: uppercase;
+    font-family: var(--font-header);
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.05;
+    color: hsl(230, 29%, 20%);
+}
+
+.hero-text{
+    margin-bottom: 30px;
+    line-height: 1.4;
+    max-width: 280px;
+    font-family: var(--font-text);    
+    color: hsl(230, 11%, 40%);
+}
+
+.hero-invitation{
+    font-family: var(--font-header);
+}
+
+.schedule-btn{
+    margin-right: 20px;
+    border:none;
+    padding: 12px 23px;
+    border-radius: 7px;
+    
+    text-transform: uppercase;
+    font-weight: 700;
+    color: hsl(207, 33%, 95%);
+    background-color: hsl(0, 100%, 68%);
+    font-family: var(--font-header);
+    font-size: 14px;
+    letter-spacing: 1px;
+
+    transition: ease-in-out 0.2s;
+}
+
+.schedule-btn:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.hero-invitation span{
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 100;
+    color: hsl(231, 7%, 65%);
+}
+
+@media (max-width: 280px){
+    .hero-title{
+        display: grid;
+        grid-gap: 5px;
+    }
+
+    .hero-invitation{
+        display: grid;
+        text-align: center;
+        grid-gap: 10px;
+        margin-bottom: 20px;
+    }
+    .schedule-btn{
+        margin: 0;
+    }
+}
+/* responsive for midsize */
+@media (min-width: 440px) and (max-width: 759px){
+    .hero{
+        text-align: center;
+    }
+    .hero-caption{
+        max-width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .hero-text{
+        max-width: 280px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+/* responsive for largesize */
+@media (min-width: 760px){
+    .hero{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+    }
+    .hero-img{
+        grid-column: 2/3;
+        width: 50%;
+        margin: 0;
+    }
+
+    .hero-img img{
+        position:absolute;
+        width: 810px;
+    }
+
+    .grid-left{
+        grid-row: 1/2;
+        padding-top: 40px;
+        padding-right: 30px;
+    }
+
+    .hero-caption{
+        max-width: 500px;
+        font-size: 62px;
+        margin-bottom: 30px;
+    }
+
+    .hero-text{
+        font-size: 19px;
+        max-width: 300px;
+    }
+
+    .hero-invitation span{
+        font-size: 16px;
+    }
+
+    .schedule-btn{
+        padding: 14px 30px;
+    }
+}
+
+/* change state */
+.activate{
+    display: block;
+}
+
+.activate + .hamberger-menu > .hamberger-btn{
+    display: none;
+}
+
+.activate + .hamberger-menu > .close-btn{
+    display: block;
+}
+
