@@ -17,7 +17,10 @@ p{
 }
 
 .main {
+    max-width: 1440px;
+    margin: 0 auto;
     padding: 0px 32px;
+
     background: url(./images/bg-header-mobile.png) center top no-repeat;
     background-size: cover;
 }
@@ -25,6 +28,7 @@ p{
 @media screen and (min-width: 1000px) {
     .main{
         background: url(./images/bg-header-desktop.png) center top no-repeat;
+        background-size: cover;
     }
 }
 
