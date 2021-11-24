@@ -323,6 +323,8 @@ p{
 /* footer */
 
 .footer {
+    padding-left: 32px;
+    padding-right: 32px;
     background-color: #f5f6f8;
 }
 
