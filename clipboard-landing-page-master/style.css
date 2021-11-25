@@ -171,10 +171,6 @@ p{
     grid-gap: 50px;
 }
 
-.spec {
-
-}
-
 .small-header-text {
     margin-bottom: 10px;
     font-size: 24px;
@@ -258,20 +254,12 @@ p{
     grid-gap: 50px;
 }
 
-.spec {
-
-}
-
 .spec-img {
     margin-bottom: 35px;
 }
 
 .spec .small-header-text {
     margin-bottom: 25px;
-}
-
- .small-text {
-
 }
 
 @media screen and (min-width: 1000px) {
@@ -337,9 +325,6 @@ p{
 }
 .footer-logo {
     height: 55px;
-}
-
-.footer-nav {
 }
 
 .nav-list {
