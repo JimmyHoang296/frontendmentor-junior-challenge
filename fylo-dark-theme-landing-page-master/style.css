@@ -1,0 +1,286 @@
+:root{
+    --font-text: 'Open Sans', sans-serif;
+    --font-header: 'Raleway', sans-serif;
+
+    --color-intro-bg: hsl(217,28%,13%);
+    --color-main-bg: hsl(218, 53%, 9%);
+    --color-foot-bg: hsl(216, 53%, 9%);
+    --color-testi-bg: hsl(219, 30%, 18%);
+
+    --color-err: hsl(0, 100%, 63%);
+    --color-text: hsl(0, 0%, 100%);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-family: var(--font-text);
+    color: var(--color-text);
+}
+
+header, main, footer{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-text);
+
+}
+
+li{
+    list-style: none;
+}
+
+button{
+    outline: none;
+}
+
+img{
+    /* width: 100%; */
+}
+
+.main{
+    position: relative;
+}
+/* header */
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 20px;
+
+
+    background-color: #1b2330;
+}
+
+.logo-img{
+    height: 25px;
+}
+
+.header-nav{
+}
+
+.nav-list{
+    display: flex;
+    gap: 25px;
+}
+
+.nav-link{
+    font-size: 12px;
+    font-weight: 400;
+    font-family: var(--font-header);
+}
+
+/* hero */
+
+.main{
+    background-color: var(--color-main-bg);
+}
+
+.hero{
+    padding: 25px 35px;
+
+    text-align: center;
+    background: url(./images/bg-curvy-mobile.svg) center center no-repeat;
+    background-size: contain;
+    background-color: #1b2330;
+}
+
+.hero-img{
+    /* margin-left: -15px;
+    margin-right: -15px; */
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.hero-caption{
+    margin-bottom: 10px;
+    font-family: var(--font-header);
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+.hero-text{
+    margin-bottom: 30px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.btn{
+    padding: 15px 75px;
+    border-radius: 30px;
+    border: none;
+
+    color: var(--color-text);
+    font-size: 14px;
+    font-weight: 400;
+    background: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+}
+
+.get-start{
+
+}
+
+/* function */
+.function{
+    display: grid;
+    gap: 80px;
+    padding: 100px 25px;
+    text-align: center;
+}
+
+.function-card{
+
+}
+
+.function-card__img{
+    height: 65px;
+    margin-bottom: 30px;
+}
+
+.function-card__header  {
+    margin-bottom: 10px;
+    font-family: var(--font-header);
+    font-size: 17px;
+}
+
+.function-card__text{
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.function-card{
+
+}
+
+/* infor */
+
+.infor{
+    padding: 70px 25px;
+}
+
+.infor-img{
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.infor-content{
+
+}
+
+.infor-header{
+    font-size: 18px;
+    font-family: var(--font-header);
+    margin-bottom: 20px;
+}
+
+.infor-text{
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;   
+}
+
+.infor-link {
+    font-size: 12px;
+    color: hsl(176, 68%, 64%);
+    padding-bottom: 4px;
+    border-bottom: 1px solid hsl(176, 68%, 64%);
+}
+
+.infor-link span{
+    margin-left: 4px;
+    position: relative;
+    top: 4px;
+
+}
+
+
+/* review */
+.reviews-list{
+    display: grid;
+    gap: 24px;
+    padding: 100px 45px 335px;
+
+    background: url(./images/bg-quotes.png) 45px 75px no-repeat;
+    background-size: 30px;
+}
+
+.review{
+    padding: 24px 20px;
+    border-radius: 5px;
+    background-color: var(--color-testi-bg);
+}
+
+
+.review-text{
+    font-size: 10px;
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.reviewer{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 5px;
+    align-items: center;
+}
+
+.reviewer-img{
+    grid-area: 1/1/3/2;
+    margin-right: 5px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.reviewer-img>img{
+    width: 100%;
+
+}
+
+.reviewer-name{
+    grid-area: 1/2/1/3;
+    font-size: 10px;
+    font-family: var(--font-header);
+}
+
+.reviewer-title{
+    grid-area: 2/2/3/3;
+    font-size: 8px;
+    font-family: var(--font-header);
+}
+
+/* call to action */
+
+.call-action{
+    position: absolute;   
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    bottom: -170px;
+
+    text-align: center;
+    background-color: var(--color-testi-bg);
+}
+
+.call-action__header{
+    
+}
+
+.call-action__text{
+    
+}
+
+.btn submit-email{
+    
+}
