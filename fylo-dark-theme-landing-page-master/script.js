@@ -19,4 +19,5 @@ submitBtn.addEventListener('click', () => {
 
 inputText.addEventListener("focus", () => {
     inputText.classList.remove('err')
+    inputText.value =""
 })
