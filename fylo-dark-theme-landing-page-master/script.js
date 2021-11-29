@@ -11,7 +11,12 @@ function ValidateEmail(inputText){
 }
 
 submitBtn.addEventListener('click', () => {
-    if (ValidateEmail(inputText)){
+    console.log(ValidateEmail(inputText))
+    if (!ValidateEmail(inputText)){
         inputText.classList.add('err')
     }
+})
+
+inputText.addEventListener("focus", () => {
+    inputText.classList.remove('err')
 })

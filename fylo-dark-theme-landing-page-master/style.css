@@ -437,7 +437,7 @@ button{
     color: var(--color-err);
 }
 
-.err .caution{
+.err + .caution{
     display: block;
 }
 
@@ -456,7 +456,7 @@ button{
         font-size: 30px;
     }
     
-    form{
+    .form{
         display: grid;
         gap: 30px;
         grid-template-columns: 1fr auto;
