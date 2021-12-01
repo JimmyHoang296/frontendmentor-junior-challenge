@@ -63,9 +63,6 @@ button{
     height: 25px;
 }
 
-.header-nav{
-}
-
 .nav-list{
     display: flex;
     gap: 25px;
@@ -158,11 +155,6 @@ button{
     /* font-weight: 700; */
 }
 
-
-.get-start{
-
-}
-
 @media (min-width: 700px){
     .hero{
         background: url(./images/bg-curvy-desktop.svg) center bottom no-repeat;
@@ -195,9 +187,6 @@ button{
     gap: 80px;
     padding: 100px 25px;
     text-align: center;
-}
-
-.function-card{
 }
 
 .function-card__img{
@@ -242,10 +231,6 @@ button{
     width: 95%;
     max-width: 550px;
     margin-bottom: 20px;
-}
-
-.infor-content{
-
 }
 
 .infor-header{
